@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+notebook/audit_log.jsonl
+notebook/prompt_registry.jsonl
+notebook/figures/

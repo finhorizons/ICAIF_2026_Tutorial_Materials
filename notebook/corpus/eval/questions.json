@@ -1,0 +1,416 @@
+{
+  "company": "NVIDIA Corporation",
+  "cik": "0001045810",
+  "notes": "Gold answers were written by hand from the source documents listed in corpus/README.md. Monetary values are USD millions unless a unit is given. 'numbers' lists the figures a faithful answer must contain, after unit normalisation (so 215.9 billion and 215,938 million both match). 'evidence' names the document and location an answer should cite. 'as_of' questions are answered against the corpus as it stood on that date.",
+  "questions": [
+    {
+      "id": "q01",
+      "type": "table_lookup",
+      "question": "What was NVIDIA's total revenue for fiscal year 2026, and how much did it grow compared with fiscal year 2025?",
+      "gold_answer": "Revenue for fiscal year 2026 was $215,938 million (about $215.9 billion), up 65% from $130,497 million in fiscal year 2025.",
+      "numbers": [
+        {
+          "value": 215938,
+          "unit": "USD_millions"
+        },
+        {
+          "value": 65,
+          "unit": "percent"
+        }
+      ],
+      "evidence": [
+        {
+          "doc": "nvda-10k-fy2026",
+          "where": "Item 7, Fiscal Year 2026 Summary table"
+        },
+        {
+          "doc": "nvda-10k-fy2026",
+          "where": "Consolidated Statements of Income"
+        }
+      ],
+      "xbrl": {
+        "concept": "Revenues",
+        "fy": 2026,
+        "fp": "FY",
+        "value": 215938000000
+      },
+      "answerable": true
+    },
+    {
+      "id": "q02",
+      "type": "table_lookup",
+      "question": "What was NVIDIA's Data Center revenue in fiscal year 2026 and in fiscal year 2025?",
+      "gold_answer": "Data Center revenue was $193,737 million in fiscal year 2026 and $115,186 million in fiscal year 2025, an increase of 68%.",
+      "numbers": [
+        {
+          "value": 193737,
+          "unit": "USD_millions"
+        },
+        {
+          "value": 115186,
+          "unit": "USD_millions"
+        }
+      ],
+      "evidence": [
+        {
+          "doc": "nvda-10k-fy2026",
+          "where": "Note 16, revenue by end market table"
+        },
+        {
+          "doc": "nvda-10k-fy2026",
+          "where": "Item 7, 'Data Center revenue for fiscal year 2026 was up 68%'"
+        }
+      ],
+      "answerable": true
+    },
+    {
+      "id": "q03",
+      "type": "table_lookup",
+      "question": "Within Data Center, how much fiscal 2026 revenue came from Compute and how much from Networking?",
+      "gold_answer": "In fiscal year 2026 Data Center Compute revenue was $162,361 million and Networking revenue was $31,376 million.",
+      "numbers": [
+        {
+          "value": 162361,
+          "unit": "USD_millions"
+        },
+        {
+          "value": 31376,
+          "unit": "USD_millions"
+        }
+      ],
+      "evidence": [
+        {
+          "doc": "nvda-10k-fy2026",
+          "where": "Note 16, revenue by end market table"
+        }
+      ],
+      "answerable": true
+    },
+    {
+      "id": "q04",
+      "type": "text_lookup",
+      "question": "What charge did NVIDIA record in fiscal 2026 in connection with its H20 product, and what caused it?",
+      "gold_answer": "NVIDIA recorded a $4.5 billion charge in the first quarter of fiscal year 2026 for H20 excess inventory and purchase obligations, after the U.S. government informed the company in April 2025 that a license was required to export H20 products to China, which reduced demand for H20.",
+      "numbers": [
+        {
+          "value": 4500,
+          "unit": "USD_millions"
+        }
+      ],
+      "evidence": [
+        {
+          "doc": "nvda-10k-fy2026",
+          "where": "Item 7, Recent Developments; also Item 1A risk factors on export controls"
+        }
+      ],
+      "answerable": true
+    },
+    {
+      "id": "q05",
+      "type": "text_lookup",
+      "question": "How concentrated was NVIDIA's revenue in fiscal 2026? What share of total revenue came from its largest direct customers?",
+      "gold_answer": "In fiscal year 2026 one direct customer accounted for 22% of total revenue and another direct customer for 14%, both primarily attributable to the Compute & Networking segment.",
+      "numbers": [
+        {
+          "value": 22,
+          "unit": "percent"
+        },
+        {
+          "value": 14,
+          "unit": "percent"
+        }
+      ],
+      "evidence": [
+        {
+          "doc": "nvda-10k-fy2026",
+          "where": "Note 16, Direct Customers paragraph; Item 1A risk factor on customer concentration"
+        }
+      ],
+      "answerable": true
+    },
+    {
+      "id": "q06",
+      "type": "stress_footnote",
+      "question": "What percentage of NVIDIA's fiscal 2026 revenue came from customers headquartered outside the United States, and how does that compare with fiscal 2025?",
+      "gold_answer": "Customers headquartered outside the United States accounted for 31% of total revenue in fiscal year 2026, down from 41% in fiscal year 2025 (and 48% in fiscal year 2024). Note that in the third quarter of fiscal 2026 NVIDIA changed to attributing revenue by customer headquarters location and recast prior periods.",
+      "numbers": [
+        {
+          "value": 31,
+          "unit": "percent"
+        },
+        {
+          "value": 41,
+          "unit": "percent"
+        }
+      ],
+      "evidence": [
+        {
+          "doc": "nvda-10k-fy2026",
+          "where": "Note 16, revenue by geographic region and footnote (1)"
+        }
+      ],
+      "stress": "The geographic basis changed during the year; a faithful answer should not mix the old billing-location basis with the new headquarters basis.",
+      "answerable": true
+    },
+    {
+      "id": "q07",
+      "type": "text_lookup",
+      "question": "How much did NVIDIA spend repurchasing shares in fiscal 2026, and how much repurchase authorization remained at the end of the year?",
+      "gold_answer": "In fiscal year 2026 NVIDIA repurchased 282 million shares for $40.4 billion. As of January 25, 2026 it was authorized to repurchase up to a further $58.5 billion of common stock.",
+      "numbers": [
+        {
+          "value": 40400,
+          "unit": "USD_millions"
+        },
+        {
+          "value": 58500,
+          "unit": "USD_millions"
+        }
+      ],
+      "evidence": [
+        {
+          "doc": "nvda-10k-fy2026",
+          "where": "Item 5, Issuer Purchases of Equity Securities"
+        },
+        {
+          "doc": "nvda-q4fy26-press-release",
+          "where": "paragraph on capital return ($41.1 billion including dividends)"
+        }
+      ],
+      "stress": "The press release quotes $41.1 billion returned to shareholders, which includes $974 million of dividends. Repurchases alone were $40.4 billion.",
+      "answerable": true,
+      "note": "282 million shares is in the gold answer but not required: the question asks for the amount spent and the authorization left."
+    },
+    {
+      "id": "q08",
+      "type": "multi_document",
+      "question": "What were NVIDIA's GAAP and non-GAAP gross margins for fiscal 2026, and why did the GAAP gross margin fall compared with fiscal 2025?",
+      "gold_answer": "For fiscal year 2026 GAAP gross margin was 71.1% and non-GAAP gross margin was 71.3%, down from 75.0% GAAP in fiscal year 2025. The decline reflected the transition from Hopper HGX systems to Blackwell full-scale data center solutions and the $4.5 billion H20 charge for excess inventory and purchase obligations.",
+      "numbers": [
+        {
+          "value": 71.1,
+          "unit": "percent"
+        },
+        {
+          "value": 71.3,
+          "unit": "percent"
+        },
+        {
+          "value": 75.0,
+          "unit": "percent"
+        },
+        {
+          "value": 4500,
+          "unit": "USD_millions"
+        }
+      ],
+      "evidence": [
+        {
+          "doc": "nvda-q4fy26-press-release",
+          "where": "second paragraph"
+        },
+        {
+          "doc": "nvda-10k-fy2026",
+          "where": "Item 7, 'Gross margin decreased in fiscal year 2026...'"
+        }
+      ],
+      "answerable": true
+    },
+    {
+      "id": "q09",
+      "type": "computation",
+      "question": "What was NVIDIA's GAAP operating margin for fiscal year 2026?",
+      "gold_answer": "Operating income of $130,387 million on revenue of $215,938 million gives a GAAP operating margin of about 60.4% for fiscal year 2026.",
+      "numbers": [
+        {
+          "value": 130387,
+          "unit": "USD_millions"
+        },
+        {
+          "value": 215938,
+          "unit": "USD_millions"
+        },
+        {
+          "value": 60.4,
+          "unit": "percent",
+          "tolerance": 0.2
+        }
+      ],
+      "evidence": [
+        {
+          "doc": "nvda-10k-fy2026",
+          "where": "Item 7, Fiscal Year 2026 Summary table or Consolidated Statements of Income"
+        }
+      ],
+      "derivation": "130387 / 215938",
+      "answerable": true
+    },
+    {
+      "id": "q10",
+      "type": "computation",
+      "question": "By how much did NVIDIA's inventories increase between January 26, 2025 and January 25, 2026?",
+      "gold_answer": "Inventories rose from $10,080 million at January 26, 2025 to $21,403 million at January 25, 2026, an increase of $11,323 million.",
+      "numbers": [
+        {
+          "value": 21403,
+          "unit": "USD_millions"
+        },
+        {
+          "value": 10080,
+          "unit": "USD_millions"
+        },
+        {
+          "value": 11323,
+          "unit": "USD_millions"
+        }
+      ],
+      "evidence": [
+        {
+          "doc": "nvda-10k-fy2026",
+          "where": "Consolidated Balance Sheets"
+        }
+      ],
+      "derivation": "21403 - 10080",
+      "answerable": true
+    },
+    {
+      "id": "q11",
+      "type": "earnings_release",
+      "question": "What were NVIDIA's revenue and Data Center revenue in the fourth quarter of fiscal 2026, and how did they compare with a year earlier?",
+      "gold_answer": "Fourth-quarter fiscal 2026 revenue was $68.1 billion ($68,127 million), up 73% from a year ago, and Data Center revenue was $62.3 billion ($62,314 million), up 75% from a year ago.",
+      "numbers": [
+        {
+          "value": 68127,
+          "unit": "USD_millions",
+          "tolerance_abs": 100
+        },
+        {
+          "value": 62314,
+          "unit": "USD_millions",
+          "tolerance_abs": 100
+        },
+        {
+          "value": 73,
+          "unit": "percent"
+        },
+        {
+          "value": 75,
+          "unit": "percent"
+        }
+      ],
+      "evidence": [
+        {
+          "doc": "nvda-q4fy26-press-release",
+          "where": "headline bullets"
+        },
+        {
+          "doc": "nvda-q4fy26-cfo-commentary",
+          "where": "Q4 Fiscal 2026 Summary and Revenue by Market Platform tables"
+        }
+      ],
+      "answerable": true
+    },
+    {
+      "id": "q12",
+      "type": "stress_period",
+      "question": "What was NVIDIA's net income in fiscal year 2025?",
+      "gold_answer": "Net income for fiscal year 2025 was $72,880 million.",
+      "numbers": [
+        {
+          "value": 72880,
+          "unit": "USD_millions"
+        }
+      ],
+      "forbidden_numbers": [
+        {
+          "value": 120067,
+          "unit": "USD_millions",
+          "reason": "fiscal 2026 figure, wrong period"
+        }
+      ],
+      "evidence": [
+        {
+          "doc": "nvda-10k-fy2026",
+          "where": "Consolidated Statements of Income, prior-year column"
+        }
+      ],
+      "stress": "The fiscal 2026 figure ($120,067 million) sits in the same table; the system must pick the right column.",
+      "answerable": true
+    },
+    {
+      "id": "q13",
+      "type": "text_lookup",
+      "question": "How many employees did NVIDIA have at the end of fiscal 2026, and how many of them worked in research and development?",
+      "gold_answer": "At the end of fiscal year 2026 NVIDIA had approximately 42,000 employees in 38 countries, of whom about 31,000 were engaged in research and development and 11,000 in sales, marketing, operations and administration.",
+      "numbers": [
+        {
+          "value": 42000,
+          "unit": "count"
+        },
+        {
+          "value": 31000,
+          "unit": "count"
+        }
+      ],
+      "evidence": [
+        {
+          "doc": "nvda-10k-fy2026",
+          "where": "Item 1, Human Capital Management"
+        }
+      ],
+      "answerable": true
+    },
+    {
+      "id": "q14",
+      "type": "unanswerable",
+      "question": "How many Blackwell GPUs did NVIDIA ship in fiscal year 2026?",
+      "gold_answer": "The filings in the corpus do not disclose unit shipments of Blackwell GPUs. A faithful system should say the information is not available in the documents rather than estimate a number.",
+      "numbers": [],
+      "evidence": [],
+      "answerable": false
+    },
+    {
+      "id": "q15",
+      "type": "point_in_time",
+      "question": "What was NVIDIA's most recently reported quarterly revenue?",
+      "variants": [
+        {
+          "as_of": "2026-03-01",
+          "gold_answer": "As of 1 March 2026 the latest reported quarter was the fourth quarter of fiscal 2026 (ended January 25, 2026), with revenue of $68,127 million.",
+          "numbers": [
+            {
+              "value": 68127,
+              "unit": "USD_millions",
+              "tolerance_abs": 100
+            }
+          ],
+          "evidence": [
+            {
+              "doc": "nvda-q4fy26-cfo-commentary",
+              "where": "Q4 Fiscal 2026 Summary"
+            }
+          ]
+        },
+        {
+          "as_of": "2026-09-01",
+          "gold_answer": "As of 1 September 2026 the latest reported quarter was the second quarter of fiscal 2027 (ended July 26, 2026), with revenue of $96,221 million, up 106% from a year ago.",
+          "numbers": [
+            {
+              "value": 96221,
+              "unit": "USD_millions",
+              "tolerance_abs": 100
+            }
+          ],
+          "evidence": [
+            {
+              "doc": "nvda-10q-q2fy2027",
+              "where": "Item 2, 'Revenue was $96.2 billion, up 106% from a year ago'"
+            }
+          ]
+        }
+      ],
+      "stress": "The answer depends on the as-of date. In fiscal 2027 NVIDIA also changed its market-platform presentation (Hyperscale and ACIE instead of the old Data Center split) and recast prior periods, so figures for the same quarter differ between filings.",
+      "answerable": true
+    }
+  ]
+}
